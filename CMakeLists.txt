@@ -27,3 +27,16 @@ add_executable(${PROJECT_NAME} ${SOURCES})
 target_link_libraries(${PROJECT_NAME} PRIVATE $<$<BOOL:${OpenMP_CXX_FOUND}>:OpenMP::OpenMP_CXX>)
 
 file(GENERATE OUTPUT .gitignore CONTENT "*")
+
+add_executable(tga_painter
+  main_painter.cpp
+  model.cpp
+  model.h
+  geometry.h
+  our_gl.cpp
+  our_gl.h
+  tgaimage.cpp
+  tgaimage.h
+  tgapainter.cpp
+  tgapainter.h
+)
